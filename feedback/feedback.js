@@ -554,6 +554,69 @@ function addOptionalField(target, key, value) {
     target[key] = normalized;
 }
 
+function buildFeedbackMessage({
+    heading,
+    reason,
+    missingFeature,
+    confusingReason,
+    technicalIssue,
+    betterAlternativeReason,
+    otherReason,
+    detailedFeedback,
+    userEmail,
+    timeSinceInstall,
+    version,
+    systemSummary,
+    localeSummary,
+    abandonmentStage,
+    draftAgeMinutes
+}) {
+    const lines = [
+        heading,
+        '',
+        `REASON: ${reason || 'Not selected'}`
+    ];
+
+    const inlineDetails = [
+        missingFeature ? `MISSING FEATURE: ${missingFeature}` : '',
+        confusingReason ? `CONFUSING: ${confusingReason}` : '',
+        technicalIssue ? `TECHNICAL ISSUE: ${technicalIssue}` : '',
+        betterAlternativeReason ? `BETTER ALTERNATIVE: ${betterAlternativeReason}` : '',
+        otherReason ? `OTHER REASON: ${otherReason}` : ''
+    ].filter(Boolean);
+
+    if (inlineDetails.length) {
+        lines.push(inlineDetails.join(' | '));
+    }
+
+    if (detailedFeedback) {
+        lines.push('', 'DETAILED FEEDBACK:', detailedFeedback);
+    }
+
+    if (userEmail) {
+        lines.push('', `USER EMAIL: ${userEmail}`);
+    }
+
+    lines.push(
+        '',
+        'METADATA:',
+        `- Time Since Install: ${timeSinceInstall || 'Unknown'}`,
+        `- Extension Version: ${version || 'Unknown'}`,
+        `- System: ${systemSummary || 'Unknown'}`,
+        `- Locale: ${localeSummary || 'Unknown'}`
+    );
+
+    if (abandonmentStage) {
+        lines.push(`- Abandonment Stage: ${abandonmentStage}`);
+    }
+
+    if (typeof draftAgeMinutes === 'number' && !Number.isNaN(draftAgeMinutes)) {
+        lines.push(`- Draft Age: ${draftAgeMinutes} minute${draftAgeMinutes === 1 ? '' : 's'}`);
+    }
+
+    return lines.join('\n');
+}
+
 function sendWeb3FormsPayload(payload, useKeepalive = false) {
     const requestBody = JSON.stringify(payload);
 
@@ -731,6 +794,21 @@ async function sendFullFeedback() {
     addOptionalField(data, 'better_alternative_reason', betterAlternativeReason || '');
     addOptionalField(data, 'other_reason', otherReason || '');
     addOptionalField(data, 'detailed_feedback', feedbackData.feedback || '');
+    data.message = buildFeedbackMessage({
+        heading: 'COMPLETE UNINSTALL FEEDBACK:',
+        reason: selectedReason,
+        missingFeature,
+        confusingReason,
+        technicalIssue,
+        betterAlternativeReason,
+        otherReason,
+        detailedFeedback: feedbackData.feedback || '',
+        userEmail: feedbackData.email || '',
+        timeSinceInstall: timeSinceInstallFormatted,
+        version: feedbackData.version,
+        systemSummary,
+        localeSummary
+    });
 
     const response = await sendWeb3FormsPayload(data);
 
@@ -925,6 +1003,23 @@ async function sendAbandonedDraft(draftData, abandonmentStage = 'step1', useKeep
     addOptionalField(payload, 'better_alternative_reason', draftData.betterAlternativeReason || '');
     addOptionalField(payload, 'other_reason', draftData.otherReason || '');
     addOptionalField(payload, 'detailed_feedback', draftData.feedback || '');
+    payload.message = buildFeedbackMessage({
+        heading: abandonmentStage === 'step1' ? 'QUICK UNINSTALL FEEDBACK:' : 'ABANDONED UNINSTALL FEEDBACK:',
+        reason: draftData.reason || 'not selected',
+        missingFeature: draftData.missingFeature || '',
+        confusingReason: draftData.confusingReason || '',
+        technicalIssue: draftData.technicalIssue || '',
+        betterAlternativeReason: draftData.betterAlternativeReason || '',
+        otherReason: draftData.otherReason || '',
+        detailedFeedback: draftData.feedback || '',
+        userEmail: draftData.email || '',
+        timeSinceInstall: timeSinceInstallFormatted,
+        version: draftData.version,
+        systemSummary,
+        localeSummary,
+        abandonmentStage,
+        draftAgeMinutes: Math.floor((Date.now() - draftData.timestamp) / 60000)
+    });
 
     if (amplitudeTracker) {
         amplitudeTracker.track(`Uninstall - Abandonment ${abandonmentStage === 'step2' ? 'Step 2' : 'Step 1'}`, {
