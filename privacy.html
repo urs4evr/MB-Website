@@ -111,28 +111,22 @@
         <p>When you use our Service, we automatically collect certain information about your interaction with the extension. This usage data may include information such as the time spent on websites you've chosen to track, the frequency of your visits to these sites, and patterns of usage throughout the day. This information is primarily stored locally on your device and is used to provide you with productivity insights and enforce the limits you've configured. We may also collect aggregated and anonymized usage metrics to understand how our features are being utilized and to identify areas for improvement.</p>
         
         <h4>Device and Technical Information</h4>
-        <p>We collect information about the device and browser environment in which our extension operates. This includes technical specifications such as your browser type and version, operating system, screen resolution, hardware capabilities, language preferences, and timezone settings. We may also generate a browser fingerprint using various technical parameters to maintain service continuity and provide consistent analytics across installation sessions. This fingerprint is created using standard browser APIs and cannot be used to personally identify you.</p>
+        <p>We collect information about the device and browser environment in which our extension operates. This includes technical specifications such as your browser type and version, operating system, screen resolution, hardware capabilities, language preferences, and timezone settings. We generate a pseudonymous device identifier using standard browser APIs to maintain service continuity and provide consistent analytics across installation sessions. This identifier cannot be used to personally identify you and is not linked to any personal data.</p>
         
         <h4>Configuration and Preferences</h4>
         <p>The Service stores various configuration settings and preferences that you establish, including but not limited to: website time limits, blacklisted domains, feature toggles, user interface customizations, and personalized content such as motivational quotes. These preferences may be synchronized across devices if you have Chrome synchronization enabled, utilizing Google's infrastructure for cross-device consistency.</p>
         
         <h4>Analytics and Performance Data</h4>
-        <p>To improve our Service and understand user behavior patterns, we collect analytics data through integrated third-party services. This includes event data about feature usage, interaction patterns, error occurrences, and performance metrics. We utilize Amplitude for product analytics, which processes data in accordance with their privacy policy and maintains infrastructure within the European Union for GDPR compliance. Analytics data is associated with a pseudonymous identifier that is not linked to your personal identity.</p>
+        <p>To improve our Service and understand user behavior patterns, we collect analytics data through integrated third-party services. This includes event data about feature usage, interaction patterns, error occurrences, performance metrics, and the date of extension installation to measure retention. We utilize Amplitude for product analytics, which processes data in accordance with their privacy policy. Analytics data is associated with a pseudonymous identifier and is not linked to your personal identity.</p>
         
         <h4>Geographic Information</h4>
-        <p>We may determine your approximate geographic location at the country and city level through IP address geolocation via ipapi.co. Your IP address is sent to this third-party service for geolocation purposes, but we do not store your IP address. Location information is used for analytics purposes, to provide localized experiences, and to ensure compliance with regional regulations.</p>
+        <p>We may determine your approximate geographic region through IP address geolocation via ipapi.co. Your IP address is sent to this third-party service for geolocation purposes, but we do not store your IP address. Location information is used for analytics purposes, to provide localized experiences, and to ensure compliance with regional regulations.</p>
 
         <h4>Bug Reports and Contact Information</h4>
         <p>When you submit bug reports or contact us through the extension's contact form, we collect the information you provide, including your email address, message content, and any optional screenshots you attach. Bug reports and contact form submissions are processed through Web3Forms, a third-party form handling service. Screenshots attached to bug reports are uploaded to Cloudinary for temporary storage and processing. These service providers have access to this information solely to process your report or message and provide it to us.</p>
 
-        <h4>Canvas Fingerprinting</h4>
-        <p>We employ canvas fingerprinting as part of our device fingerprinting methodology. This technique generates a unique identifier based on how your browser renders canvas graphics, enabling us to maintain consistent analytics across installation sessions and browser updates. The canvas fingerprint is combined with other stable browser characteristics to create a composite fingerprint that cannot be used to personally identify you.</p>
-
-        <h4>Email Newsletter Subscription</h4>
-        <p>If you opt in to receive our email newsletter, your email address is collected and stored in our Supabase database. You may manage your subscription preferences at any time through the extension's settings. You can unsubscribe from our mailing list by clicking the unsubscribe link in any newsletter email or by adjusting your preferences in the extension.</p>
-
-        <h4>Installation Date Tracking</h4>
-        <p>We record the date when you install the extension in your browser's local storage. This information is used to calculate user tenure, personalize experiences based on time since installation, and measure user retention metrics.</p>
+        <h4>Email Newsletter and Pro Account</h4>
+        <p>If you opt in to receive our email newsletter or register for a Pro account, your email address is collected and stored in our Supabase database. For Pro subscriptions, payment processing is handled by Polar, which collects billing information necessary to process your subscription. You may manage your subscription preferences at any time and unsubscribe from marketing emails by clicking the unsubscribe link in any newsletter email.</p>
 
         <h3>How We Process Information</h3>
         
@@ -153,7 +147,8 @@
           <li><strong>ipapi.co</strong> - IP address geolocation for geographic location determination</li>
           <li><strong>Web3Forms</strong> - Processing of bug reports and contact form submissions</li>
           <li><strong>Cloudinary</strong> - Storage and processing of screenshots attached to bug reports</li>
-          <li><strong>Supabase</strong> - User authentication and email newsletter management</li>
+          <li><strong>Supabase</strong> - User authentication, Pro account management, and email newsletter management</li>
+          <li><strong>Polar</strong> - Payment processing for Pro subscriptions</li>
         </ul>
         
         <h3>Legal Requirements</h3>
@@ -190,7 +185,7 @@
         <p>You can update or correct most of your information directly through the extension's settings. If you wish to delete your information, you can uninstall the extension, which will remove all locally stored data. For data held by our service providers, deletion requests may be subject to their respective policies and legal obligations.</p>
         
         <h3>Opt-Out Rights</h3>
-        <p>You may opt out of certain data collection practices by adjusting your extension settings or by uninstalling the extension. Some features of the Service may require certain data to function properly, and opting out of data collection may affect the availability of these features.</p>
+        <p>You may opt out of all data collection by uninstalling the extension, which will remove all locally stored data. Some features of the Service may require certain data to function properly. You may also unsubscribe from email communications at any time using the unsubscribe link provided in every newsletter email.</p>
         
         <h3>Do Not Track</h3>
         <p>Some browsers include a Do Not Track ("DNT") feature that signals to websites that you do not want to have your online activity tracked. Our Service does not currently respond to DNT signals as there is no universally accepted standard for how to respond to such signals.</p>
@@ -199,7 +194,7 @@
             <h3>Legal Basis for Processing (GDPR)</h3>
             <p>For users in the European Economic Area, we process personal data based on the following legal grounds: (i) your consent to process your personal data for one or more specific purposes; (ii) processing is necessary for the performance of the Service you have requested; (iii) processing is necessary for compliance with a legal obligation; (iv) processing is necessary to protect the vital interests of you or another person; (v) processing is necessary for the purposes of legitimate interests pursued by us or a third party, except where such interests are overridden by your interests or fundamental rights and freedoms.</p>
             
-            <p>Our legitimate interests include: providing and improving the Service; understanding how users interact with our Service; ensuring network and information security; preventing fraud and abuse; and marketing our services to interested users. When we process personal information to meet our legitimate interests, we put in place robust safeguards to ensure that your privacy is protected and to ensure that our legitimate interests are not overridden by your interests or fundamental rights and freedoms.</p>
+            <p>Our legitimate interests include: providing and improving the Service; understanding how users interact with our Service; ensuring network and information security; and preventing fraud and abuse. When we process personal information to meet our legitimate interests, we put in place robust safeguards to ensure that your privacy is protected and to ensure that our legitimate interests are not overridden by your interests or fundamental rights and freedoms.</p>
         </div>
 
         <h2>Children's Privacy</h2>
@@ -230,8 +225,9 @@
             <p>If you have any questions or concerns about this Privacy Policy or our data practices, you may contact us at:</p>
             
             <p><strong>Monkey Block</strong><br>
+            Email: support@monkey-block.com<br>
             Website: <a href="https://monkey-block.com" target="_blank">monkey-block.com</a><br>
-            Support: Available through the extension's settings menu</p>
+            Support: Also available through the extension's settings menu</p>
             
             <p>We will make reasonable efforts to address and resolve any privacy concerns you may have. Response times may vary depending on the nature and complexity of your request. For requests related to your privacy rights under applicable data protection laws, we will respond within the timeframes required by such laws.</p>
             

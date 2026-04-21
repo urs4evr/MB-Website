@@ -95,12 +95,12 @@
         <div class="service-section">
             <h2>Supabase</h2>
             
-            <p><strong>Purpose:</strong> User authentication and email newsletter management</p>
+            <p><strong>Purpose:</strong> User authentication, Pro account management, and email newsletter management</p>
             
             <p><strong>Data Collected:</strong></p>
             <ul>
                 <li>Email address (only for users who opt in to newsletter or create a Pro account)</li>
-                <li>Authentication tokens (for Pro account users)</li>
+                <li>Session tokens (JWT) stored locally to maintain Pro account login state</li>
             </ul>
             
             <p><strong>How Data Is Used:</strong></p>
@@ -136,7 +136,7 @@
                 <li>Pseudonymous device identifier (browser fingerprint)</li>
                 <li>Feature usage events (e.g., timer started, shield enabled, impulse check triggered)</li>
                 <li>Error events and performance metrics</li>
-                <li>Approximate geographic location (country level)</li>
+                <li>Approximate geographic region (derived from IP at request time)</li>
             </ul>
             
             <p><strong>How Data Is Used:</strong></p>
@@ -156,8 +156,8 @@
             
             <p><strong>Data Retention:</strong></p>
             <ul>
-                <li>Per Amplitude's default retention policy (typically 90 days for event data, longer for aggregated metrics)</li>
-                <li>Users can opt out by disabling analytics in extension settings</li>
+                <li>Per Amplitude's retention policy (see <a href="https://amplitude.com/privacy" target="_blank">amplitude.com/privacy</a>)</li>
+                <li>Users can stop all analytics collection by uninstalling the extension</li>
             </ul>
             
             <p><strong>Location:</strong> EU servers (GDPR compliant)</p>
@@ -257,6 +257,40 @@
             <p><strong>Location:</strong> Third-party service (check <a href="https://cloudinary.com/privacy" target="_blank">cloudinary.com/privacy</a>)</p>
         </div>
 
+        <div class="service-section">
+            <h2>Polar</h2>
+            
+            <p><strong>Purpose:</strong> Payment processing for Pro subscriptions</p>
+            
+            <p><strong>Data Collected:</strong></p>
+            <ul>
+                <li>Email address (required for subscription)</li>
+                <li>Billing information (handled directly by Polar; not accessible to Monkey Block)</li>
+                <li>Subscription status</li>
+            </ul>
+            
+            <p><strong>How Data Is Used:</strong></p>
+            <ul>
+                <li>To process Pro subscription payments</li>
+                <li>To verify active subscription status</li>
+                <li>To issue receipts and handle refunds</li>
+            </ul>
+            
+            <p><strong>Data Sharing:</strong></p>
+            <ul>
+                <li>Only with Polar as the payment processor</li>
+                <li>Monkey Block does not store or access your payment card information</li>
+            </ul>
+            
+            <p><strong>Data Retention:</strong></p>
+            <ul>
+                <li>Per Polar's retention policy (see <a href="https://polar.sh/legal/privacy" target="_blank">polar.sh/legal/privacy</a>)</li>
+                <li>Subscription data retained as required for tax and accounting compliance</li>
+            </ul>
+            
+            <p><strong>Location:</strong> Third-party service (check <a href="https://polar.sh/legal/privacy" target="_blank">polar.sh/legal/privacy</a>)</p>
+        </div>
+
         <h2>Summary</h2>
         
         <p>All sensitive APIs and third-party services are used solely for the specific purposes described above. We do not use these services for:</p>
@@ -271,7 +305,7 @@
         <p>Users can:</p>
         
         <ul>
-            <li>Opt out of analytics in extension settings</li>
+            <li>Stop all analytics collection by uninstalling the extension</li>
             <li>Unsubscribe from email newsletters at any time</li>
             <li>Delete all local data by uninstalling the extension</li>
             <li>Request deletion of data held by third-party services</li>
@@ -283,7 +317,7 @@
             <p>For questions about this Limited Use Policy, contact:</p>
             
             <p><strong>Monkey Block</strong><br>
-            Email: mr.seanwinn@gmail.com<br>
+            Email: support@monkey-block.com<br>
             Website: <a href="/contact.html">monkey-block.com/contact</a></p>
         </div>
 
