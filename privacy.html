@@ -120,7 +120,19 @@
         <p>To improve our Service and understand user behavior patterns, we collect analytics data through integrated third-party services. This includes event data about feature usage, interaction patterns, error occurrences, and performance metrics. We utilize Amplitude for product analytics, which processes data in accordance with their privacy policy and maintains infrastructure within the European Union for GDPR compliance. Analytics data is associated with a pseudonymous identifier that is not linked to your personal identity.</p>
         
         <h4>Geographic Information</h4>
-        <p>We may determine your approximate geographic location at the country and city level through IP address geolocation. This process is handled by third-party services and we do not store your IP address. Location information is used for analytics purposes, to provide localized experiences, and to ensure compliance with regional regulations.</p>
+        <p>We may determine your approximate geographic location at the country and city level through IP address geolocation via ipapi.co. Your IP address is sent to this third-party service for geolocation purposes, but we do not store your IP address. Location information is used for analytics purposes, to provide localized experiences, and to ensure compliance with regional regulations.</p>
+
+        <h4>Bug Reports and Contact Information</h4>
+        <p>When you submit bug reports or contact us through the extension's contact form, we collect the information you provide, including your email address, message content, and any optional screenshots you attach. Bug reports and contact form submissions are processed through Web3Forms, a third-party form handling service. Screenshots attached to bug reports are uploaded to Cloudinary for temporary storage and processing. These service providers have access to this information solely to process your report or message and provide it to us.</p>
+
+        <h4>Canvas Fingerprinting</h4>
+        <p>We employ canvas fingerprinting as part of our device fingerprinting methodology. This technique generates a unique identifier based on how your browser renders canvas graphics, enabling us to maintain consistent analytics across installation sessions and browser updates. The canvas fingerprint is combined with other stable browser characteristics to create a composite fingerprint that cannot be used to personally identify you.</p>
+
+        <h4>Email Newsletter Subscription</h4>
+        <p>If you opt in to receive our email newsletter, your email address is collected and stored in our Supabase database. You may manage your subscription preferences at any time through the extension's settings. You can unsubscribe from our mailing list by clicking the unsubscribe link in any newsletter email or by adjusting your preferences in the extension.</p>
+
+        <h4>Installation Date Tracking</h4>
+        <p>We record the date when you install the extension in your browser's local storage. This information is used to calculate user tenure, personalize experiences based on time since installation, and measure user retention metrics.</p>
 
         <h3>How We Process Information</h3>
         
@@ -135,7 +147,14 @@
         <p>We are committed to protecting your privacy and do not sell, rent, or trade your personal information. We may share information only in the following limited circumstances:</p>
         
         <h3>Service Providers</h3>
-        <p>We engage certain third-party companies and individuals to facilitate our Service and to perform Service-related functions. These service providers have access to your information only to perform specific tasks on our behalf and are obligated not to disclose or use it for any other purpose. Our primary service providers include analytics platforms for understanding usage patterns and geolocation services for determining approximate location from IP addresses.</p>
+        <p>We engage certain third-party companies and individuals to facilitate our Service and to perform Service-related functions. These service providers have access to your information only to perform specific tasks on our behalf and are obligated not to disclose or use it for any other purpose. Our service providers include:</p>
+        <ul>
+          <li><strong>Amplitude</strong> - Product analytics and feature usage tracking (EU servers)</li>
+          <li><strong>ipapi.co</strong> - IP address geolocation for geographic location determination</li>
+          <li><strong>Web3Forms</strong> - Processing of bug reports and contact form submissions</li>
+          <li><strong>Cloudinary</strong> - Storage and processing of screenshots attached to bug reports</li>
+          <li><strong>Supabase</strong> - User authentication and email newsletter management</li>
+        </ul>
         
         <h3>Legal Requirements</h3>
         <p>We may disclose your information if required to do so by law or in response to valid requests by public authorities. This includes situations where disclosure is necessary to comply with a legal obligation, protect and defend our rights or property, prevent or investigate possible wrongdoing in connection with the Service, protect the personal safety of users or the public, or protect against legal liability.</p>
@@ -147,7 +166,7 @@
         <p>We may share aggregated and anonymized information that cannot reasonably be used to identify you. This may include aggregate usage statistics, demographic information, and general usage patterns that help us understand how our Service is being used and how we can improve it.</p>
 
         <h2>Data Security</h2>
-        
+
         <p>The security of your information is important to us, and we strive to implement and maintain reasonable, commercially acceptable security procedures and practices appropriate to the nature of the information we store, in order to protect it from unauthorized access, destruction, use, modification, or disclosure.</p>
         
         <p>We utilize a variety of security technologies and procedures to help protect your information from unauthorized access, use, or disclosure. These measures include technical safeguards such as encryption, organizational measures such as access controls, and physical security measures where applicable. However, please be aware that no method of transmission over the internet, or method of electronic storage is 100% secure and we are unable to guarantee the absolute security of the information we have collected from you.</p>
@@ -220,17 +239,11 @@
         </div>
 
         <p style="text-align: center; margin-top: 50px; color: #888; font-size: 13px;">
-            © 2025 Monkey Block. All rights reserved. | <a href="/" style="color: inherit;">Home</a> | <a href="/contact.html" style="color: inherit;">Contact</a><br>
-            Last updated: January 2025
+            © 2026 Monkey Block. All rights reserved. | <a href="/" style="color: inherit;">Home</a> | <a href="/contact.html" style="color: inherit;">Contact</a><br>
+            Last updated: April 2026
         </p>
     </div>
     
     <!-- Analytics -->
-    <!-- Reddit Pixel -->
-    <script>
-        !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);
-        rdt('init','a2_hgd05h3o4oza', {"optOut":false,"useDecimalCurrencyValues":true});
-        rdt('track', 'PageVisit');
-    </script>
 </body>
 </html>

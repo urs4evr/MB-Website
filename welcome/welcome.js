@@ -350,17 +350,6 @@ class WelcomePage {
         install_count: 1  // Welcome page is shown on first install
       });
       
-      // Track Reddit Lead conversion event for installation
-      if (typeof rdt !== 'undefined') {
-        try {
-          // Track as Lead event (supported conversion type)
-          // KEIN value oder currency - nur der Event selbst
-          rdt('track', 'Lead');
-          console.log('[Reddit Pixel] Lead event tracked for extension installation');
-        } catch (error) {
-          console.error('[Reddit Pixel] Error tracking Lead event:', error);
-        }
-      }
     }
     
     // Track time on page and engagement

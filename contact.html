@@ -322,7 +322,7 @@
     </div>
     
     <footer>
-        <p>© <span id="year"></span> Monkey Block. All rights reserved. | <a href="/privacy.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a></p>
+        <p>© <span id="year"></span> Monkey Block. All rights reserved. | <a href="/privacy.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a> | <a href="/terms.html" style="color: inherit; text-decoration: underline;">Terms of Service</a> | <a href="/limited-use.html" style="color: inherit; text-decoration: underline;">Limited Use Policy</a></p>
     </footer>
     
     <script>
@@ -427,25 +427,6 @@
                 // Re-enable submit button
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'Send Message';
-            }
-        });
-    </script>
-    
-    <!-- Analytics -->
-    <!-- Reddit Pixel -->
-    <script>
-        !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);
-        rdt('init','a2_hgd05h3o4oza', {"optOut":false,"useDecimalCurrencyValues":true});
-        rdt('track', 'PageVisit');
-        
-        // Track contact form submission
-        document.getElementById('contactForm').addEventListener('submit', function() {
-            if (typeof rdt !== 'undefined') {
-                rdt('track', 'Custom', {
-                    customEventName: 'Contact_Form_Submitted',
-                    value: 1,
-                    currency: 'USD'
-                });
             }
         });
     </script>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limited Use Policy - Monkey Block</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        .limited-use-container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.65;
+            color: #3a3a3a;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        }
+        .limited-use-container h1 {
+            color: #1a1a1a;
+            font-size: 36px;
+            margin-bottom: 35px;
+            font-weight: 600;
+        }
+        .limited-use-container h2 {
+            color: #2a2a2a;
+            margin-top: 40px;
+            margin-bottom: 18px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .limited-use-container h3 {
+            color: #3a3a3a;
+            margin-top: 28px;
+            margin-bottom: 14px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .limited-use-container p {
+            color: #4a4a4a;
+            margin-bottom: 14px;
+            font-size: 15px;
+            line-height: 1.7;
+            text-align: justify;
+        }
+        .limited-use-container ul {
+            margin-left: 22px;
+            margin-bottom: 18px;
+        }
+        .limited-use-container li {
+            color: #4a4a4a;
+            margin-bottom: 10px;
+            font-size: 15px;
+            line-height: 1.65;
+        }
+        .limited-use-container strong {
+            color: #2a2a2a;
+            font-weight: 600;
+        }
+        .back-home {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .back-home:hover {
+            text-decoration: underline;
+        }
+        .contact-info {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .service-section {
+            background: #f8f8f8;
+            padding: 20px;
+            margin: 30px 0;
+            border-left: 3px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="limited-use-container">
+        <a href="/" class="back-home">← Back to Home</a>
+        
+        <h1>Limited Use Policy</h1>
+        
+        <p><strong>Last Updated:</strong> April 2026</p>
+
+        <h2>Overview</h2>
+        
+        <p>This Limited Use Policy describes how Monkey Block uses sensitive APIs and services that require special disclosure under Chrome Web Store policies. We are committed to using these services only for the specific purposes described below.</p>
+
+        <div class="service-section">
+            <h2>Supabase</h2>
+            
+            <p><strong>Purpose:</strong> User authentication and email newsletter management</p>
+            
+            <p><strong>Data Collected:</strong></p>
+            <ul>
+                <li>Email address (only for users who opt in to newsletter or create a Pro account)</li>
+                <li>Authentication tokens (for Pro account users)</li>
+            </ul>
+            
+            <p><strong>How Data Is Used:</strong></p>
+            <ul>
+                <li>Email addresses are used solely for sending product newsletters and account-related communications</li>
+                <li>Authentication tokens enable secure access to Pro features</li>
+                <li>No personal data is shared with third parties beyond what is necessary for authentication</li>
+            </ul>
+            
+            <p><strong>Data Sharing:</strong></p>
+            <ul>
+                <li>None (data is only shared with Supabase for processing authentication and email delivery)</li>
+                <li>Supabase acts as a data processor only, not a data controller</li>
+            </ul>
+            
+            <p><strong>Data Retention:</strong></p>
+            <ul>
+                <li>Email addresses: Until user unsubscribes or deletes their account</li>
+                <li>Authentication tokens: Until user logs out or deletes their account</li>
+                <li>Users can delete their data at any time through the extension settings</li>
+            </ul>
+            
+            <p><strong>Location:</strong> EU-based infrastructure (GDPR compliant)</p>
+        </div>
+
+        <div class="service-section">
+            <h2>Amplitude Analytics</h2>
+            
+            <p><strong>Purpose:</strong> Product analytics and feature usage tracking</p>
+            
+            <p><strong>Data Collected:</strong></p>
+            <ul>
+                <li>Pseudonymous device identifier (browser fingerprint)</li>
+                <li>Feature usage events (e.g., timer started, shield enabled, impulse check triggered)</li>
+                <li>Error events and performance metrics</li>
+                <li>Approximate geographic location (country level)</li>
+            </ul>
+            
+            <p><strong>How Data Is Used:</strong></p>
+            <ul>
+                <li>To understand which features are most used</li>
+                <li>To identify and fix bugs</li>
+                <li>To improve user experience</li>
+                <li>To make data-driven product decisions</li>
+            </ul>
+            
+            <p><strong>Data Sharing:</strong></p>
+            <ul>
+                <li>None (internal analytics only)</li>
+                <li>Data is NOT used for personalized advertising</li>
+                <li>Data is NOT sold or shared with third parties</li>
+            </ul>
+            
+            <p><strong>Data Retention:</strong></p>
+            <ul>
+                <li>Per Amplitude's default retention policy (typically 90 days for event data, longer for aggregated metrics)</li>
+                <li>Users can opt out by disabling analytics in extension settings</li>
+            </ul>
+            
+            <p><strong>Location:</strong> EU servers (GDPR compliant)</p>
+        </div>
+
+        <div class="service-section">
+            <h2>ipapi.co</h2>
+            
+            <p><strong>Purpose:</strong> Geographic location determination</p>
+            
+            <p><strong>Data Collected:</strong></p>
+            <ul>
+                <li>IP address (sent to ipapi.co for geolocation)</li>
+            </ul>
+            
+            <p><strong>How Data Is Used:</strong></p>
+            <ul>
+                <li>To determine approximate country/city location</li>
+                <li>To provide localized experiences</li>
+                <li>To ensure compliance with regional regulations</li>
+            </ul>
+            
+            <p><strong>Data Sharing:</strong></p>
+            <ul>
+                <li>None (IP address is sent to ipapi.co but not stored by us)</li>
+            </ul>
+            
+            <p><strong>Data Retention:</strong></p>
+            <ul>
+                <li>Real-time only (IP address is not stored by Monkey Block)</li>
+                <li>ipapi.co may retain IP data according to their own policy</li>
+            </ul>
+            
+            <p><strong>Location:</strong> Third-party service (check <a href="https://ipapi.co/privacy" target="_blank">ipapi.co/privacy</a> for details)</p>
+        </div>
+
+        <div class="service-section">
+            <h2>Web3Forms</h2>
+            
+            <p><strong>Purpose:</strong> Bug report and contact form processing</p>
+            
+            <p><strong>Data Collected:</strong></p>
+            <ul>
+                <li>Email address (provided by user)</li>
+                <li>Message content (provided by user)</li>
+                <li>Optional screenshots (uploaded by user)</li>
+            </ul>
+            
+            <p><strong>How Data Is Used:</strong></p>
+            <ul>
+                <li>To process and deliver bug reports to developers</li>
+                <li>To respond to user inquiries</li>
+            </ul>
+            
+            <p><strong>Data Sharing:</strong></p>
+            <ul>
+                <li>Web3Forms (form processing service only)</li>
+                <li>Cloudinary (for screenshot storage and processing)</li>
+            </ul>
+            
+            <p><strong>Data Retention:</strong></p>
+            <ul>
+                <li>Until the bug report is resolved (typically 30 days)</li>
+                <li>Screenshots are deleted after processing</li>
+            </ul>
+            
+            <p><strong>Location:</strong> Third-party services (check <a href="https://web3forms.com/privacy" target="_blank">web3forms.com/privacy</a> and <a href="https://cloudinary.com/privacy" target="_blank">cloudinary.com/privacy</a>)</p>
+        </div>
+
+        <div class="service-section">
+            <h2>Cloudinary</h2>
+            
+            <p><strong>Purpose:</strong> Screenshot upload and processing for bug reports</p>
+            
+            <p><strong>Data Collected:</strong></p>
+            <ul>
+                <li>Screenshot images (uploaded by user)</li>
+            </ul>
+            
+            <p><strong>How Data Is Used:</strong></p>
+            <ul>
+                <li>To store and process screenshots attached to bug reports</li>
+                <li>To optimize image size for delivery</li>
+            </ul>
+            
+            <p><strong>Data Sharing:</strong></p>
+            <ul>
+                <li>None (screenshots are only accessible to Monkey Block developers)</li>
+            </ul>
+            
+            <p><strong>Data Retention:</strong></p>
+            <ul>
+                <li>Until the bug report is resolved (typically 30 days)</li>
+                <li>Screenshots are automatically deleted after processing</li>
+            </ul>
+            
+            <p><strong>Location:</strong> Third-party service (check <a href="https://cloudinary.com/privacy" target="_blank">cloudinary.com/privacy</a>)</p>
+        </div>
+
+        <h2>Summary</h2>
+        
+        <p>All sensitive APIs and third-party services are used solely for the specific purposes described above. We do not use these services for:</p>
+        
+        <ul>
+            <li>Personalized advertising</li>
+            <li>Selling user data</li>
+            <li>Sharing data with data brokers</li>
+            <li>Cross-site tracking of user behavior</li>
+        </ul>
+        
+        <p>Users can:</p>
+        
+        <ul>
+            <li>Opt out of analytics in extension settings</li>
+            <li>Unsubscribe from email newsletters at any time</li>
+            <li>Delete all local data by uninstalling the extension</li>
+            <li>Request deletion of data held by third-party services</li>
+        </ul>
+
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            
+            <p>For questions about this Limited Use Policy, contact:</p>
+            
+            <p><strong>Monkey Block</strong><br>
+            Email: mr.seanwinn@gmail.com<br>
+            Website: <a href="/contact.html">monkey-block.com/contact</a></p>
+        </div>
+
+        <p style="text-align: center; margin-top: 50px; color: #888; font-size: 13px;">
+            © 2026 Monkey Block. All rights reserved. | <a href="/" style="color: inherit;">Home</a> | <a href="/privacy.html" style="color: inherit;">Privacy Policy</a> | <a href="/terms.html" style="color: inherit;">Terms of Service</a><br>
+            Last updated: April 2026
+        </p>
+    </div>
+</body>
+</html>
